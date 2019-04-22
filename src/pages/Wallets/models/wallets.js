@@ -1,26 +1,24 @@
-
-
 export default {
-    namespace: 'wallets',
+  namespace: 'wallets',
 
-    state: {
-        isModalOpen: false,
+  state: {
+    isModalOpen: false,
+  },
+  effects: {
+    *toggleModal(payload, { put }) {
+      yield put({
+        type: 'openModal',
+      });
     },
-    effects: {
-        *toggleModal(payload, {put}) {
-            yield put({
-                type: 'openModal',
-            })
-        },
-    },
+  },
 
-    reducers: {
-        toogleModal(state) {
-            console.log("it is coming here ", state);
-            return {
-                ...state,
-                isModalOpen: !state.isModalOpen,
-            }
-        }
-    }
-}
+  reducers: {
+    toogleModal(state) {
+      console.log('it is coming here ', state);
+      return {
+        ...state,
+        isModalOpen: !state.isModalOpen,
+      };
+    },
+  },
+};
