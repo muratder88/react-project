@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Tabs, Icon, Button, Row, Col } from 'antd';
 import { connect } from 'dva';
 
-import FirstModal from './FirsModal';
+import FirstModal from './FirstModal';
 import BitcoinWallet from './BitcoinWallet';
 
 const { TabPane } = Tabs;
