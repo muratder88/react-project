@@ -7,6 +7,7 @@ export default {
     labelModal: false,
     labelModalFromWeb: false,
     verificationModal : false,
+    completedModal: false,
   },
   effects: {
   },
@@ -33,6 +34,10 @@ export default {
     toggleVerificationModal: (state) => ({
       ...state,
       verificationModal: !state.verificationModal,
+    }),
+    toggleCompletedModal: (state) => ({
+      ...state,
+      completedModal: !state.completedModal,
     })
   },
 };

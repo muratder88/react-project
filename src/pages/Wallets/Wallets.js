@@ -8,6 +8,7 @@ import ConfirmModal from "./modals/ConfirmModal";
 import LabelModal from './modals/LabelModal';
 import LabelModalFromWeb from './modals/LabelModalFromWeb';
 import VerificationModal from './modals/VerificationModal';
+import CompletedModal from './modals/CompletedModal';
 
 const { TabPane } = Tabs;
 
@@ -129,6 +130,15 @@ class Wallets extends Component {
           >
           Verification Modal
           </Button>
+          <Button
+            onClick={() => {
+            dispatch({
+              type: 'wallets/toggleCompletedModal',
+            })
+          }}
+          >
+          Completed Modal
+          </Button>
         </div>
        
         <FirstModal />
@@ -136,6 +146,7 @@ class Wallets extends Component {
         <LabelModal />
         <LabelModalFromWeb />
         <VerificationModal />
+        <CompletedModal />
 
         <Tabs tabPosition="left">
           <TabPane
