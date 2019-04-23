@@ -4,13 +4,10 @@ export default {
   state: {
     isModalOpen: false,
     confirmModal: false,
+    labelModal: false,
+    labelModalFromWeb: false,
   },
   effects: {
-    *toggleModal(payload, { put }) {
-      yield put({
-        type: 'openModal',
-      });
-    },
   },
 
   reducers: {
@@ -23,6 +20,14 @@ export default {
     toggleConfirmModal: (state) => ({
       ...state,
       confirmModal: !state.confirmModal,
+    }),
+    toggleLabelModal: (state) => ({
+      ...state,
+      labelModal: !state.labelModal,
+    }),
+    toggleLabelModalFromWeb: (state) => ({
+      ...state,
+      labelModalFromWeb: !state.labelModalFromWeb
     })
   },
 };

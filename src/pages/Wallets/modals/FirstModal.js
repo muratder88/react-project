@@ -5,10 +5,7 @@ import { Modal, Row, Col, Divider, Icon } from 'antd';
 import styles from './FirstModal.less';
 
 const FirstModal = ({ isModalVisible, dispatch }) => {
-  console.log('First Modal is rendering ');
   const handleModalOk = () => {
-    console.log('handleModalOk dispatch', dispatch);
-
     dispatch({
       type: 'wallets/toogleModal',
     });

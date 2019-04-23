@@ -5,6 +5,8 @@ import { connect } from 'dva';
 import BitcoinWallet from './BitcoinWallet';
 import FirstModal from './modals/FirstModal';
 import ConfirmModal from "./modals/ConfirmModal";
+import LabelModal from './modals/LabelModal';
+import LabelModalFromWeb from './modals/LabelModalFromWeb';
 
 const { TabPane } = Tabs;
 
@@ -99,10 +101,30 @@ class Wallets extends Component {
            }}
           >Confirm Modal 
           </Button>
+          <Button 
+            onClick={() => {
+            dispatch({
+              type: 'wallets/toggleLabelModal',
+            });
+          }}
+          >
+          Label Modal
+          </Button>
+          <Button
+            onClick={() => {
+            dispatch({
+              type: 'wallets/toggleLabelModalFromWeb',
+            })
+          }}
+          >
+          Label Modal From Web
+          </Button>
         </div>
        
         <FirstModal />
         <ConfirmModal />
+        <LabelModal />
+        <LabelModalFromWeb />
 
         <Tabs tabPosition="left">
           <TabPane
