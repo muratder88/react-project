@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
-import { Modal, Row, Col, Divider, Icon, Button } from 'antd';
+import { Modal, Row, Col, Divider, Icon } from 'antd';
 
 import styles from './FirstModal.less';
 
@@ -68,7 +68,6 @@ const FirstModal = ({ isModalVisible, dispatch }) => {
 };
 
 export default connect(state => {
-  console.log('All state ', state);
   return {
     isModalVisible: state.wallets.isModalOpen,
   };

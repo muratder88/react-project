@@ -3,6 +3,7 @@ export default {
 
   state: {
     isModalOpen: false,
+    confirmModal: false,
   },
   effects: {
     *toggleModal(payload, { put }) {
@@ -14,11 +15,14 @@ export default {
 
   reducers: {
     toogleModal(state) {
-      console.log('it is coming here ', state);
       return {
         ...state,
         isModalOpen: !state.isModalOpen,
       };
     },
+    toggleConfirmModal: (state) => ({
+      ...state,
+      confirmModal: !state.confirmModal,
+    })
   },
 };

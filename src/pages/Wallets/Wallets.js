@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Tabs, Icon, Button, Row, Col } from 'antd';
 import { connect } from 'dva';
 
-import FirstModal from './FirstModal';
 import BitcoinWallet from './BitcoinWallet';
+import FirstModal from './modals/FirstModal';
+import ConfirmModal from "./modals/ConfirmModal";
 
 const { TabPane } = Tabs;
 
@@ -79,16 +80,29 @@ class Wallets extends Component {
     const { dispatch } = this.props;
     return (
       <div>
-        <Button
-          onClick={() => {
+        <div>
+          <Button
+            onClick={() => {
             dispatch({
               type: 'wallets/toogleModal',
             });
           }}
-        >
+          >
           Open Modal
-        </Button>
+          </Button>
+
+          <Button
+            onClick={() => {
+             dispatch({
+               type: 'wallets/toggleConfirmModal',
+             });
+           }}
+          >Confirm Modal 
+          </Button>
+        </div>
+       
         <FirstModal />
+        <ConfirmModal />
 
         <Tabs tabPosition="left">
           <TabPane
