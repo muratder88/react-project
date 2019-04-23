@@ -48,7 +48,6 @@ class WalletLayout extends Component{
               </div>
             </div>
             <div className={styles.content}>
-              <h1>Wallet Layout Title here!!!!</h1>
               {children}
             </div>
             <Footer>Footer</Footer>
