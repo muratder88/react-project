@@ -7,6 +7,7 @@ import FirstModal from './modals/FirstModal';
 import ConfirmModal from "./modals/ConfirmModal";
 import LabelModal from './modals/LabelModal';
 import LabelModalFromWeb from './modals/LabelModalFromWeb';
+import VerificationModal from './modals/VerificationModal';
 
 const { TabPane } = Tabs;
 
@@ -119,12 +120,22 @@ class Wallets extends Component {
           >
           Label Modal From Web
           </Button>
+          <Button
+            onClick={() => {
+            dispatch({
+              type: 'wallets/toggleVerificationModal',
+            })
+          }}
+          >
+          Verification Modal
+          </Button>
         </div>
        
         <FirstModal />
         <ConfirmModal />
         <LabelModal />
         <LabelModalFromWeb />
+        <VerificationModal />
 
         <Tabs tabPosition="left">
           <TabPane
