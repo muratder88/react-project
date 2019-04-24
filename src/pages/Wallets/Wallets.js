@@ -87,7 +87,7 @@ class Wallets extends Component {
     const { dispatch } = this.props;
     return (
       <div>
-        <div>
+        <div style={{ marginBottom: 30 }}>
           <Button
             onClick={() => {
               dispatch({
