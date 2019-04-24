@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import { Tabs, Icon, Button, Row, Col } from 'antd';
+import { Tabs, Button, Row, Col } from 'antd';
 import { connect } from 'dva';
 
 import BitcoinWallet from './BitcoinWallet';
 import FirstModal from './modals/FirstModal';
-import ConfirmModal from "./modals/ConfirmModal";
+import ConfirmModal from './modals/ConfirmModal';
 import LabelModal from './modals/LabelModal';
 import LabelModalFromWeb from './modals/LabelModalFromWeb';
 import VerificationModal from './modals/VerificationModal';
 import CompletedModal from './modals/CompletedModal';
+
+import styles from './Wallets.less';
+import BitcoinImg from '../../assets/bitcoin.png';
 
 const { TabPane } = Tabs;
 
@@ -32,7 +35,7 @@ const renderValues = values => {
     </div>
   ));
 };
-const CustomTab = ({ text, icon, values }) => (
+const CustomTab = ({ text, values }) => (
   <div style={{ width: 300, fontFamily: 'Lato' }}>
     <Row type="flex">
       <Col span={4}>
@@ -44,7 +47,7 @@ const CustomTab = ({ text, icon, values }) => (
             justifyContent: 'center',
           }}
         >
-          <Icon type={icon} theme="filled" />
+          <img src={BitcoinImg} alt="bitcoin" width="24" />
         </div>
       </Col>
       <Col span={10}>
@@ -87,60 +90,61 @@ class Wallets extends Component {
         <div>
           <Button
             onClick={() => {
-            dispatch({
-              type: 'wallets/toogleModal',
-            });
-          }}
+              dispatch({
+                type: 'wallets/toogleModal',
+              });
+            }}
           >
-          Open Modal
+            Open Modal
           </Button>
 
           <Button
             onClick={() => {
-             dispatch({
-               type: 'wallets/toggleConfirmModal',
-             });
-           }}
-          >Confirm Modal 
-          </Button>
-          <Button 
-            onClick={() => {
-            dispatch({
-              type: 'wallets/toggleLabelModal',
-            });
-          }}
+              dispatch({
+                type: 'wallets/toggleConfirmModal',
+              });
+            }}
           >
-          Label Modal
+            Confirm Modal
           </Button>
           <Button
             onClick={() => {
-            dispatch({
-              type: 'wallets/toggleLabelModalFromWeb',
-            })
-          }}
+              dispatch({
+                type: 'wallets/toggleLabelModal',
+              });
+            }}
           >
-          Label Modal From Web
+            Label Modal
           </Button>
           <Button
             onClick={() => {
-            dispatch({
-              type: 'wallets/toggleVerificationModal',
-            })
-          }}
+              dispatch({
+                type: 'wallets/toggleLabelModalFromWeb',
+              });
+            }}
           >
-          Verification Modal
+            Label Modal From Web
           </Button>
           <Button
             onClick={() => {
-            dispatch({
-              type: 'wallets/toggleCompletedModal',
-            })
-          }}
+              dispatch({
+                type: 'wallets/toggleVerificationModal',
+              });
+            }}
           >
-          Completed Modal
+            Verification Modal
+          </Button>
+          <Button
+            onClick={() => {
+              dispatch({
+                type: 'wallets/toggleCompletedModal',
+              });
+            }}
+          >
+            Completed Modal
           </Button>
         </div>
-       
+
         <FirstModal />
         <ConfirmModal />
         <LabelModal />
@@ -148,7 +152,7 @@ class Wallets extends Component {
         <VerificationModal />
         <CompletedModal />
 
-        <Tabs tabPosition="left">
+        <Tabs tabPosition="left" className={styles.mainTab}>
           <TabPane
             tab={
               <CustomTab
