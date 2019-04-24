@@ -1,21 +1,47 @@
 @import '~antd/lib/style/themes/default.less';
 
-.header{
-  display: flex;
+.header {
   position: absolute;
-  top:0;
-  left:0;
-  height: 90px;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: #005A32;
-  padding: 0 50px;
+  height: 90px;
+  background-color: #005a32;
 }
 
-.header a{
-  color: #FFFFFF;
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 }
 
-.headerLogo{
+.header a {
+  color: #fff;
+}
+
+.headerLogo {
   display: flex;
   flex: 2;
   align-items: flex-end;
@@ -26,7 +52,7 @@
   height: 60px;
 }
 
-.headerMenu{
+.headerMenu {
   display: flex;
   flex: 3;
   align-items: flex-end;
@@ -35,22 +61,22 @@
 }
 
 .headerMenu a {
-  margin: 0px 20px;
+  margin: 0 20px;
 }
 
-.headerUser{
+.headerUser {
   display: flex;
-  flex:2;
+  flex: 2;
   align-items: flex-end;
-  margin-bottom: 10px;
   justify-content: flex-end;
+  margin-bottom: 10px;
 }
 
 .headerUser a {
-  margin: 0px 10px;
+  margin: 0 10px;
 }
 
-.content{
+.content {
   margin-top: 90px;
   padding: 0 50px;
   padding-top: 20px;
