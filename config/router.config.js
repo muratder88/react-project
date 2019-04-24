@@ -17,8 +17,8 @@ export default [
       },
     ],
   },
-   // wallets
-   {
+  // wallets
+  {
     path: '/wallets',
     component: '../layouts/WalletLayout',
     routes: [
@@ -307,7 +307,7 @@ export default [
       {
         path: '/deneme',
         component: 'Deneme/Deneme',
-      },  
+      },
       {
         component: '404',
       },

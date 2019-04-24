@@ -6,11 +6,10 @@ export default {
     confirmModal: false,
     labelModal: false,
     labelModalFromWeb: false,
-    verificationModal : false,
+    verificationModal: false,
     completedModal: false,
   },
-  effects: {
-  },
+  effects: {},
 
   reducers: {
     toogleModal(state) {
@@ -19,25 +18,25 @@ export default {
         isModalOpen: !state.isModalOpen,
       };
     },
-    toggleConfirmModal: (state) => ({
+    toggleConfirmModal: state => ({
       ...state,
       confirmModal: !state.confirmModal,
     }),
-    toggleLabelModal: (state) => ({
+    toggleLabelModal: state => ({
       ...state,
       labelModal: !state.labelModal,
     }),
-    toggleLabelModalFromWeb: (state) => ({
+    toggleLabelModalFromWeb: state => ({
       ...state,
-      labelModalFromWeb: !state.labelModalFromWeb
+      labelModalFromWeb: !state.labelModalFromWeb,
     }),
-    toggleVerificationModal: (state) => ({
+    toggleVerificationModal: state => ({
       ...state,
       verificationModal: !state.verificationModal,
     }),
-    toggleCompletedModal: (state) => ({
+    toggleCompletedModal: state => ({
       ...state,
       completedModal: !state.completedModal,
-    })
+    }),
   },
 };
