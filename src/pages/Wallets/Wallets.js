@@ -95,7 +95,7 @@ class Wallets extends Component {
               });
             }}
           >
-            Open Modal
+            Open Modal .
           </Button>
 
           <Button
