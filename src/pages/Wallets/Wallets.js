@@ -47,6 +47,7 @@ const CustomTab = ({ text, values }) => (
             justifyContent: 'center',
           }}
         >
+        
           <img src={BitcoinImg} alt="bitcoin" width="24" />
         </div>
       </Col>
