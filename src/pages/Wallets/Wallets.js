@@ -58,7 +58,7 @@ const CustomTab = ({ text, values }) => (
             flex: 1,
             textAlign: 'left',
             alignItems: 'center',
-            fontFamily: 'Lato, Black',
+            fontFamily: 'Lato',
             fontSize: 16,
           }}
         >
